@@ -7,7 +7,7 @@ export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
 
   useEffect(() => {
-    window.location.href = "/index-restored.html";
+    window.location.href = "/index.html";
   }, []);
 
   return (
