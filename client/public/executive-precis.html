@@ -42,8 +42,8 @@
 
         /* Navigation */
         .nav-container {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 10px;
             justify-content: center;
             margin-bottom: 20px;
@@ -60,6 +60,10 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .nav-button:hover {
@@ -187,9 +191,16 @@
                 padding: 20px;
             }
 
+            .nav-container {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 1px;
+            }
+
             .nav-button {
-                padding: 8px 12px;
-                font-size: 0.75rem;
+                padding: 8px 4px;
+                font-size: 0.6rem;
+                border: 1px solid #ffd700;
             }
 
             .relay-nav {
@@ -222,15 +233,14 @@
         <!-- Navigation Buttons -->
         <div class="nav-container">
             <button class="nav-button" onclick="window.location.href='index.html';">HOME</button>
-            <button class="nav-button active" onclick="window.location.href='/infrastructure-academy/executive-precis.html';">EXECUTIVE PRÉCIS</button>
+            <button class="nav-button active" onclick="window.location.href='executive-precis.html';">EXEC PRÉCIS</button>
             <button class="nav-button" onclick="window.location.href='pages/framework.html';">FRAMEWORK</button>
             <button class="nav-button" onclick="window.location.href='pages/resources.html';">RESOURCES</button>
-            <button class="nav-button" onclick="window.location.href='pages/resources.html';">MASTER INDEX</button>
-            <button class="nav-button" onclick="window.location.href='pages/about-author.html';">ABOUT THE AUTHOR</button>
-            <button class="nav-button" onclick="window.location.href='volumes/volume1/index.html';">VOLUME 1: PERSPECTIVE</button>
-            <button class="nav-button" onclick="window.location.href='volumes/volume2/index.html';">VOLUME 2: GUIDE</button>
-            <button class="nav-button" onclick="window.location.href='pages/supplements.html';">SUPPLEMENTS</button>
-            <button class="nav-button" onclick="window.location.href='volumes/volume3/index.html';">VOLUME 3: GAME</button>
+            <button class="nav-button" onclick="window.location.href='pages/documents.html';">DOCUMENTS</button>
+            <button class="nav-button" onclick="window.location.href='pages/about-author.html';">AUTHOR</button>
+            <button class="nav-button" onclick="window.location.href='volumes/volume1/index.html';">VOL.1: POV</button>
+            <button class="nav-button" onclick="window.location.href='volumes/volume2/index.html';">VOL.2: GUIDE</button>
+            <button class="nav-button" onclick="window.location.href='volumes/volume3/index.html';">VOL.3: GAME</button>
         </div>
     </div>
 
