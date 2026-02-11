@@ -619,6 +619,13 @@ footer {
   .content-box {
     padding: var(--spacing-md);
   }
+  
+  nav a {
+    flex: 0 0 calc(33.333% - 2px);
+    padding: 3px 1px;
+    font-size: 0.6rem;
+    margin: 0;
+  }
 }
 
 /* ============================================
