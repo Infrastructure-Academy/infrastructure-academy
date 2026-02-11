@@ -554,11 +554,11 @@ footer {
   }
   
   nav a {
-    width: 33.33%;
+    width: calc(33.33% - 2px);
     text-align: center;
     border: 1px solid var(--color-accent-gold);
     border-radius: var(--radius-sm);
-    padding: 3px 1px;
+    padding: 2px 0;
     font-size: 0.6rem;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -622,8 +622,8 @@ footer {
   }
   
   nav a {
-    width: 33.33%;
-    padding: 2px 0;
+    width: calc(33.33% - 2px);
+    padding: 1px 0;
     font-size: 0.55rem;
     margin: 0;
     display: block;
