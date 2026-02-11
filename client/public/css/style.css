@@ -537,8 +537,8 @@ footer {
     flex-wrap: wrap;
     background-color: var(--color-bg-secondary);
     border-bottom: 3px solid var(--color-accent-gold);
-    gap: 2px;
-    padding: 4px 2px;
+    gap: 1px;
+    padding: 2px 1px;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
@@ -554,17 +554,18 @@ footer {
   }
   
   nav a {
-    flex: 0 0 calc(33.333% - 2px);
+    width: 33.33%;
     text-align: center;
     border: 1px solid var(--color-accent-gold);
     border-radius: var(--radius-sm);
-    padding: 4px 2px;
-    font-size: 0.65rem;
+    padding: 3px 1px;
+    font-size: 0.6rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     box-sizing: border-box;
     line-height: 1.2;
     margin: 0;
+    display: block;
   }
   
   nav a:last-child {
@@ -621,10 +622,11 @@ footer {
   }
   
   nav a {
-    flex: 0 0 calc(33.333% - 2px);
-    padding: 3px 1px;
-    font-size: 0.6rem;
+    width: 33.33%;
+    padding: 2px 0;
+    font-size: 0.55rem;
     margin: 0;
+    display: block;
   }
 }
 
