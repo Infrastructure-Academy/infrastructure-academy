@@ -6,9 +6,45 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize navigation
     initializeNavigation();
     
+    // Initialize hamburger menu
+    initializeHamburgerMenu();
+    
     // Initialize relay navigation if present
     initializeRelayNavigation();
 });
+
+/**
+ * Initialize hamburger menu for mobile
+ */
+function initializeHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (!hamburger || !navMenu) return;
+    
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    // Close menu when a link is clicked
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('header')) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+}
 
 /**
  * Initialize main navigation highlighting

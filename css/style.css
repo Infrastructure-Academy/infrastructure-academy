@@ -159,6 +159,37 @@ nav {
   padding: var(--spacing-sm) 0;
 }
 
+/* Hamburger Menu Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-accent-gold);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
 nav a {
   display: inline-block;
   padding: var(--spacing-xs) var(--spacing-sm);
@@ -433,8 +464,15 @@ footer {
     padding: var(--spacing-lg);
   }
   
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
   .header-title {
     font-size: 1.25rem;
+    margin-bottom: 0;
   }
   
   .header-subtitle {
@@ -453,13 +491,40 @@ footer {
     font-size: 1.25rem;
   }
   
+  .hamburger {
+    display: flex;
+  }
+  
   nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     flex-direction: column;
+    background-color: var(--color-bg-secondary);
+    border-bottom: 3px solid var(--color-accent-gold);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    gap: 0;
+  }
+  
+  nav.active {
+    max-height: 500px;
   }
   
   nav a {
     width: 100%;
     text-align: center;
+    border: none;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 0;
+    padding: var(--spacing-sm);
+    font-size: 0.9rem;
+  }
+  
+  nav a:last-child {
+    border-bottom: none;
   }
   
   .card-grid {
