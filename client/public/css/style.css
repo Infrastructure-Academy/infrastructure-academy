@@ -554,7 +554,7 @@ footer {
   }
   
   nav a {
-    flex: 0 0 calc(33.333% - 4px);
+    flex: 0 0 calc(33.333% - 3px);
     text-align: center;
     border: 1px solid var(--color-accent-gold);
     border-radius: var(--radius-sm);
@@ -564,7 +564,7 @@ footer {
     text-overflow: ellipsis;
     box-sizing: border-box;
     line-height: 1.2;
-    margin: 2px;
+    margin: 1px;
   }
   
   nav a:last-child {
@@ -618,11 +618,6 @@ footer {
   .container,
   .content-box {
     padding: var(--spacing-md);
-  }
-  
-  nav a {
-    padding: var(--spacing-sm);
-    font-size: 0.85rem;
   }
 }
 
