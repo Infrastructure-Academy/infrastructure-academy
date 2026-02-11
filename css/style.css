@@ -508,7 +508,7 @@ footer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    gap: var(--spacing-xs);
+    gap: 3px;
     padding: var(--spacing-sm);
     justify-content: center;
     align-items: flex-start;
@@ -521,16 +521,17 @@ footer {
   }
   
   nav a {
-    flex: 0 0 calc(33.333% - 6px);
+    flex: 0 0 calc(33.333% - 3px);
     text-align: center;
     border: 1px solid var(--color-accent-gold);
     border-radius: var(--radius-sm);
-    padding: var(--spacing-xs) 4px;
-    font-size: 0.6rem;
+    padding: var(--spacing-xs) 2px;
+    font-size: 0.55rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     box-sizing: border-box;
+    line-height: 1.2;
   }
   
   nav a:last-child {
