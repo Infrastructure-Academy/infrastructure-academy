@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /**
  * Initialize hamburger menu for mobile
+ * Navigation is expanded by default, clicking hamburger collapses it
  */
 function initializeHamburgerMenu() {
     const hamburger = document.getElementById('hamburger-menu');
@@ -22,28 +23,14 @@ function initializeHamburgerMenu() {
     
     if (!hamburger || !navMenu) return;
     
-    // Toggle menu on hamburger click
+    // Toggle menu on hamburger click (collapse/expand)
     hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
+        navMenu.classList.toggle('collapsed');
     });
     
-    // Close menu when a link is clicked
-    const navLinks = navMenu.querySelectorAll('a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('header')) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
+    // Do NOT close menu when a link is clicked
+    // User must manually click hamburger to collapse
 }
 
 /**
