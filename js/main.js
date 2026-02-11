@@ -36,15 +36,34 @@ function initializeHamburgerMenu() {
  * Initialize main navigation highlighting
  */
 function initializeNavigation() {
-    const currentPage = window.location.pathname;
+    const currentPage = window.location.pathname.toLowerCase();
     const navLinks = document.querySelectorAll('nav a');
     
     navLinks.forEach(link => {
-        const href = link.getAttribute('href');
+        const href = link.getAttribute('href').toLowerCase();
+        let isActive = false;
         
-        // Check if current page matches link
-        if (currentPage.includes(href) || 
-            (currentPage === '/' && href === 'index.html')) {
+        if (currentPage.includes('library')) {
+            isActive = href.includes('library');
+        } else if (currentPage.includes('volume1')) {
+            isActive = href.includes('volume1');
+        } else if (currentPage.includes('volume2')) {
+            isActive = href.includes('volume2');
+        } else if (currentPage.includes('volume3')) {
+            isActive = href.includes('volume3');
+        } else if (currentPage.includes('framework')) {
+            isActive = href.includes('framework');
+        } else if (currentPage.includes('resources')) {
+            isActive = href.includes('resources');
+        } else if (currentPage.includes('author')) {
+            isActive = href.includes('author');
+        } else if (currentPage.includes('executive') || currentPage.includes('precis')) {
+            isActive = href.includes('executive') || href.includes('precis');
+        } else if (currentPage === '/' || currentPage.endsWith('index.html')) {
+            isActive = href.includes('home') || href === './' || href === './index.html';
+        }
+        
+        if (isActive) {
             link.classList.add('active');
         } else {
             link.classList.remove('active');
