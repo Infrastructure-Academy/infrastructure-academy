@@ -468,11 +468,20 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
   }
   
   .header-title {
     font-size: 1.25rem;
     margin-bottom: 0;
+    flex: 1;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-md) var(--spacing-lg);
   }
   
   .header-subtitle {
