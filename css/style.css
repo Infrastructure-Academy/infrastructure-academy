@@ -518,12 +518,12 @@ footer {
   }
   
   nav a {
-    width: calc(33.333% - 6px);
+    width: calc(25% - 5px);
     text-align: center;
     border: 1px solid var(--color-accent-gold);
     border-radius: var(--radius-sm);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    font-size: 0.65rem;
+    padding: var(--spacing-xs) 4px;
+    font-size: 0.6rem;
     flex-shrink: 0;
     white-space: nowrap;
     overflow: hidden;
