@@ -1,0 +1,23 @@
+{
+  "name": "infrastructure-academy",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "dev:academy": "turbo dev --filter=academy",
+    "dev:memorial": "turbo dev --filter=memorial",
+    "dev:quest": "turbo dev --filter=quest",
+    "dev:xchange": "turbo dev --filter=xchange",
+    "dev:news": "turbo dev --filter=news",
+    "deploy:all": "turbo deploy",
+    "db:push": "turbo db:push --filter=database"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "prettier": "^3.4.0"
+  }
+}
